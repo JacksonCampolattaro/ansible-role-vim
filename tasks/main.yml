@@ -25,4 +25,4 @@
           depth: 1
 
 - name: Use Vim-Plug to install plugins
-  shell: nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
+  shell: nvim --headless +PlugInstall +qall > /dev/null
