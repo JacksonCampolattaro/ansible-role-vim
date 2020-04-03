@@ -11,6 +11,14 @@ addons:
     packages:
     - python-pip
 
+# Testing on multiple platforms
+env:
+  matrix:
+    - MOLECULE_DISTRO: centos:7
+    - MOLECULE_DISTRO: fedora:28
+    - MOLECULE_DISTRO: fedora:31
+
+
 install:
   # Install ansible
   - pip install ansible
