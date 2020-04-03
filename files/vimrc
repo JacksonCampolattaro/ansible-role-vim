@@ -1,0 +1,64 @@
+" This is my vim customization file!
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" Add plugins here
+Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-surround'
+Plugin 'w0rp/ale'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdcommenter'
+
+call vundle#end()
+filetype plugin indent on
+
+" YCM expects one of these files for every project by default
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+
+" Dark background
+set background=dark
+colorscheme solarized
+
+" Enables tabbing between open buffers in a split window
+nnoremap <Tab> <C-W>W
+ 
+" Enables highlighting matching pairs of brackets
+set matchpairs+=<:>
+
+" Shows line numbers
+set number
+
+" Automatically indents each line the same as the last (for programming)
+set autoindent
+
+" Automatically saves before compiling
+set autowrite
+
+" Highlights the current line the cursor is on
+set cursorline
+
+" Adds a vertical bar at the end of the 80th line
+set colorcolumn=80
+
+" Enables folding based on syntax in most languages
+set foldmethod=syntax 
+
+" Enables mouse support
+set mouse=a
+
+" Binds the spacebar to something more useful
+noremap <space> za
+
+" ALE's sign collumn is ugly by default
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:airline#extensions#ale#enabled = 1
+hi clear SignColumn

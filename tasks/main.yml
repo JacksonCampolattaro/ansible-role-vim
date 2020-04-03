@@ -6,3 +6,11 @@
           name: vim-enhanced
           state: latest
   become: yes
+
+
+- name: Place vimrc in home directory
+  copy: 
+        src: vimrc
+        dest: ~/.vimrc
+
+
