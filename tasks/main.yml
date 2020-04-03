@@ -8,10 +8,9 @@
   become: true
 
 - name: Install NeoVim Python host
-  package:
-          name: python3-neovim
+  pip:
+          name: neovim
           state: latest
-  become: true
 
 - name: Configure NeoVim dotfiles
   copy:
