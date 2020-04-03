@@ -21,7 +21,7 @@ env:
 
 install:
   # Install ansible
-  - pip install ansible
+  - pip install ansible molecule yamllint ansible-lint docker
 
   # Check ansible version
   - ansible --version
