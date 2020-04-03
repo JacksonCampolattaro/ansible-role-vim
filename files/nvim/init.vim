@@ -1,5 +1,12 @@
 " This is my neovim customization file!
 
+" vim-plug installs itself
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " List of plugins to be installed
 call plug#begin()
 
@@ -8,11 +15,6 @@ Plug 'iCyMind/NeoSolarized'
 
 call plug#end()
 
-" Installs plugins if they're missing
-autocmd VimEnter *
-  \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall | q
-  \| endif
 
 " Set my default colorscheme
 set termguicolors
