@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include vimrc"
+      include_role:
+        name: "vimrc"
