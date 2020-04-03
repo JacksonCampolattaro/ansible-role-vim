@@ -17,6 +17,3 @@
           repo: https://github.com/junegunn/vim-plug.git
           dest: ~/.local/share/nvim/site/autoload/
           depth: 1
-
-- name: Install plugins automatically
-  command: nvim +PlugInstall +qall

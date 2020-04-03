@@ -8,6 +8,12 @@ Plug 'iCyMind/NeoSolarized'
 
 call plug#end()
 
+" Installs plugins if they're missing
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
+
 " Set my default colorscheme
 set termguicolors
 colorscheme NeoSolarized
