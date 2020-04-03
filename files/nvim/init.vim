@@ -1,4 +1,4 @@
-" This is my neovim customization file!
+ This is my neovim customization file!
 
 " List of plugins to be installed
 call plug#begin()
@@ -9,6 +9,9 @@ Plug 'iCyMind/NeoSolarized'
 " Linting engine
 Plug 'neomake/neomake'
 
+" Autocomplete engine
+Plug 'shougo/deoplete.nvim'
+
 call plug#end()
 
 
@@ -16,3 +19,10 @@ call plug#end()
 set termguicolors
 colorscheme NeoSolarized
 set background=dark
+
+" Enable Deoplete autocompletion
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_start_length = 1
+
+" mouse support
+set mouse=a
