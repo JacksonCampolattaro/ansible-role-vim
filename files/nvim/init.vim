@@ -10,8 +10,8 @@ call plug#end()
 
 " Installs plugins if they're missing
 autocmd VimEnter *
-  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync | q
+  \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall | q
   \| endif
 
 " Set my default colorscheme
