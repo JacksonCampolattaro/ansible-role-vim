@@ -8,6 +8,10 @@
   become: true
 
 - name: Install Vim-Plug
+  git:
+          repo: https://github.com/junegunn/vim-plug.git
+          dest: ~/.local/share/nvim/site/autoload/
+
   command: > 
           curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs 
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
