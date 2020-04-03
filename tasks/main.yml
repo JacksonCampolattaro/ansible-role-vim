@@ -5,4 +5,9 @@
   package:
           name: neovim
           state: latest
-  become: yes
+  become: true
+
+- name: Configure NeoVim dotfiles
+  copy:
+          src: nvim
+          dest: ~/.config/nvim
