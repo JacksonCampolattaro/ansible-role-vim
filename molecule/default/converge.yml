@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include ansible-role-vimrc"
+    - name: "Include JacksonCampolattaro.vim"
       include_role:
-        name: "ansible-role-vimrc"
+        name: "JacksonCampolattaro.vim"

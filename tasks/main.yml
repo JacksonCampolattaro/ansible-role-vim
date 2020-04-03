@@ -1,16 +1,2 @@
 ---
-# tasks file for ansible-role-vimrc
-
-- name: Install Vim if it isn't already installed
-  package:
-          name: vim-enhanced
-          state: latest
-  become: yes
-
-
-- name: Place vimrc in home directory
-  copy: 
-        src: vimrc
-        dest: ~/.vimrc
-
-
+# tasks file for JacksonCampolattaro.vim
