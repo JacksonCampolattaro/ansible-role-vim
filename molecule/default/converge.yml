@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include JacksonCampolattaro.vim"
+    - name: "Include vim"
       include_role:
-        name: "JacksonCampolattaro.vim"
+        name: "vim"
