@@ -12,8 +12,11 @@
           src: nvim
           dest: ~/.config/
 
-          #- name: Install Vim-Plug
-  #  git:
-          #          repo: https://github.com/junegunn/vim-plug.git
-          #          dest: ~/.local/share/nvim/site/autoload/
-#          depth: 1
+- name: Install Vim-Plug
+  git:
+          repo: https://github.com/junegunn/vim-plug.git
+          dest: ~/.local/share/nvim/site/autoload/
+          depth: 1
+
+- name: Use Vim-Plug to install plugins
+  command: nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
