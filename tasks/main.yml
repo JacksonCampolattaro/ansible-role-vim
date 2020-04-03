@@ -7,6 +7,12 @@
           state: latest
   become: true
 
+- name: Install NeoVim Python client
+  package:
+          name: python3-neovim
+          state: latest
+  become: true
+
 - name: Configure NeoVim dotfiles
   copy:
           src: nvim
