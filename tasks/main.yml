@@ -7,6 +7,11 @@
           state: latest
   become: true
 
+- name: Install Vim-Plug
+  command: > 
+          curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs 
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 - name: Configure NeoVim dotfiles
   copy:
           src: nvim
