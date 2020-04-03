@@ -19,4 +19,4 @@
           depth: 1
 
 - name: Install plugins automatically
-  command: vim +PlugInstall +qall
+  command: nvim +PlugInstall +qall
