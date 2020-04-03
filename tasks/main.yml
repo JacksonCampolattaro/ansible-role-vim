@@ -16,4 +16,4 @@
 - name: Configure NeoVim dotfiles
   copy:
           src: nvim
-          dest: ~/.config/nvim
+          dest: ~/.config/
