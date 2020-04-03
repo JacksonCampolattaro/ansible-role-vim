@@ -6,6 +6,9 @@ call plug#begin()
 " True color Solarized theme
 Plug 'iCyMind/NeoSolarized'
 
+" Linting engine
+Plug 'neomake/neomake'
+
 call plug#end()
 
 
