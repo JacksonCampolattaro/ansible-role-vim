@@ -7,11 +7,6 @@
           state: latest
   become: true
 
-  #- name: Install NeoVim Python host
-  #  pip:
-  #          name: neovim
-  #          state: latest
-
 - name: Install NeoVim Python host
   pip:
           name: neovim
@@ -37,6 +32,6 @@
           +UpdateRemotePlugins
           +qall!
 
-          #- name: Use Vim-Plug to install plugins
-          #  shell: nvim --headless +PlugInstall +qall > /dev/null
-          #  changed_when: false
+- name: Use Vim-Plug to install plugins
+  shell: nvim --headless +PlugInstall +qall > /dev/null
+  changed_when: false
