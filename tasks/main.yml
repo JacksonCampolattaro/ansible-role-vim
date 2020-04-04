@@ -7,10 +7,17 @@
           state: latest
   become: true
 
+  #- name: Install NeoVim Python host
+  #  pip:
+  #          name: neovim
+  #          state: latest
+
 - name: Install NeoVim Python host
   pip:
           name: neovim
           state: latest
+          extra_args: --user
+  
 
 - name: Configure NeoVim dotfiles
   copy:
@@ -23,6 +30,13 @@
           dest: ~/.local/share/nvim/site/autoload/
           depth: 1
 
-- name: Use Vim-Plug to install plugins
-  shell: nvim --headless +PlugInstall +qall > /dev/null
-  changed_when: false
+- name: Install plugins
+  shell: >
+          nvim
+          +PlugInstall
+          +UpdateRemotePlugins
+          +qall!
+
+          #- name: Use Vim-Plug to install plugins
+          #  shell: nvim --headless +PlugInstall +qall > /dev/null
+          #  changed_when: false

@@ -41,8 +41,6 @@ script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
-  - dnf search python3-neovim
-
   # Full testing sequence
   - molecule test
 
