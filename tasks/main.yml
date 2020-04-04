@@ -25,13 +25,6 @@
           dest: ~/.local/share/nvim/site/autoload/
           depth: 1
 
-- name: Install plugins
-  shell: >
-          nvim
-          +PlugInstall
-          +UpdateRemotePlugins
-          +qall!
-
 - name: Use Vim-Plug to install plugins
   shell: nvim --headless +PlugInstall +qall > /dev/null
   changed_when: false
