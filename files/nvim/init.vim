@@ -20,6 +20,9 @@ set termguicolors
 colorscheme NeoSolarized
 set background=dark
 
+" Configures Neomake build automation
+call neomake#configure#automake('nw', 750)
+
 " Enable Deoplete autocompletion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 1
