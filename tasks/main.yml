@@ -26,5 +26,5 @@
           depth: 1
 
 - name: Use Vim-Plug to install plugins
-  shell: nvim --headless +PlugInstall +qall > /dev/null
+  shell: nvim --headless +PlugInstall +UpdateRemotePlugins +qall > /dev/null
   changed_when: false
