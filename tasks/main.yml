@@ -13,11 +13,16 @@
           state: latest
           extra_args: --user
   
+- name: Pull NeoVim dotfiles from git
+  git:
+          repo: https://github.com/JacksonCampolattaro/dotfiles-vim.git
+          dest: ~/.config/nvim
+          update: true
 
-- name: Configure NeoVim dotfiles
-  copy:
-          src: nvim
-          dest: ~/.config/
+#- name: Configure NeoVim dotfiles
+  #copy:
+          #src: nvim
+          #dest: ~/.config/
 
 - name: Install Vim-Plug
   git:
