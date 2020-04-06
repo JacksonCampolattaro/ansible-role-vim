@@ -19,11 +19,6 @@
           dest: ~/.config/nvim
           update: true
 
-#- name: Configure NeoVim dotfiles
-  #copy:
-          #src: nvim
-          #dest: ~/.config/
-
 - name: Install Vim-Plug
   git:
           repo: https://github.com/junegunn/vim-plug.git
